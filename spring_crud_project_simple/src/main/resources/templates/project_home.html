@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+  <style>
+    table th {
+      background-color: #009933;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #ccc;
+    }
+    table tr {
+      text-align: center;
+    }
+
+    table tr:hover td {
+      background-color: #ffedcc;
+    }
+
+    a{
+      text-decoration: none;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div align="center">
+  <h1>Project List</h1>
+ <button> <a href="/new">add new project</a></button>
+  </br></br>
+  <table border="1" cellpadding="10">
+    <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Project Title</th>
+      <th>Project Coordinator</th>
+      <th>Project Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="project:${projectList}">
+
+      <td th:text="${project.id}"></td>
+      <td th:text="${project.title}"></td>
+      <td th:text="${project.coordinator}"></td>
+      <td><button><a th:href="@{'/edit/'+${project.id}}">Edit</a></button>
+        <button> <a th:href="@{'/delte/' + ${project.id}}">Delete</a></button>
+      </td>
+    </tr>
+
+    </tbody>
+
+  </table>
+
+
+</div>
+</body>
+</html>
