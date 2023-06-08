@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/save}" th:object="${editproject}" method=" post">
+
+  <table border="0" cellpadding="10">
+    <tr>
+      <td>
+        Project Id:
+      </td>
+      <td>
+      <input type="text" th:field="*{id}" readonly="readonly">
+      </td>
+
+    </tr>
+    <tr>
+      <td>Project Title:</td>
+      <td>
+        <input type="text" th:field="*{title}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Project Coordinator:</td>
+      <td>
+        <input type="text" th:field="*{coordinator}"/>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><button type="submit">Update</button></td>
+    </tr>
+
+  </table>
+
+</form>
+
+</body>
+</html>
