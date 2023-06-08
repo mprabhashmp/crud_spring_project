@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+  <h1>Create New Project</h1>
+  <br/>
+
+  <form action="#" th:action="@{/save}" th:object="${newProject}"method="post">
+  <table border="1"cellpadding="10">
+    <tr>
+      <td>Project Title</td>
+      <td><input type="text" th:field="*{title}"/></td>
+      </tr>
+    <tr>
+      <td>Project Coordinator</td>
+      <td><input type="text" th:field="*{coordinator}"></td>
+      </tr>
+    <tr>
+      <td colspan="2"><button type="submit">Save</button></td>
+    </tr>
+
+  </table>
+  </form>
+
+
+</div>
+
+</body>
+</html>

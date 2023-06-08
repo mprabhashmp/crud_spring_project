@@ -51,7 +51,7 @@
       <td th:text="${project.title}"></td>
       <td th:text="${project.coordinator}"></td>
       <td><button><a th:href="@{'/edit/'+${project.id}}">Edit</a></button>
-        <button> <a th:href="@{'/delte/' + ${project.id}}">Delete</a></button>
+        <button> <a th:href="@{'/delete/' + ${project.id}}">Delete</a></button>
       </td>
     </tr>
 
